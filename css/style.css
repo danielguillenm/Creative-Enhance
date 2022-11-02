@@ -1,10 +1,13 @@
 @font-face {
-font-family: MyFont;
+font-family: MyFont Regular;
 src: url("../fonts/Satoshi-Medium.ttf") format("truetype"),
 url("../fonts/Satoshi-Bold.ttf") format("truetype"),
-url("../fonts/Satoshi-BoldItalic.ttf") format("truetype"),
-url("../fonts/Satoshi-Light.ttf") format("truetype"),
-url("../fonts/Satoshi-Medium.ttf") format("truetype");
+url("../fonts/Satoshi-BoldItalic.ttf") format("truetype");
+}
+
+@font-face {
+font-family: MyFont Light;
+src: url("../fonts/Satoshi-Light.ttf") format("truetype");
 }
 
 :root{
@@ -15,7 +18,7 @@ url("../fonts/Satoshi-Medium.ttf") format("truetype");
 }
 
 body{
-	font-family: MyFont;
+	font-family: MyFont Regular;
 	font-size: 17px;
 	font-weight: 100 !important;
 	color: #000;
@@ -155,14 +158,22 @@ header{
 
 }
 
+.card-subtitulo{
+	margin-top: 0;
+	font-size: 14px;
+}
+
+.card-margin{
+	margin-bottom: 10%;
+}
 .bold-italic{
 	font-weight: 700;
 	font-style: italic;
 }
 
 .circle{
-	width: 60px;
-	height: 60px;
+	width: 90px;
+	height: 90px;
 	border: solid 1px;
 	border-radius: 50%;
 	background-color: var(--color-verde);
@@ -193,6 +204,9 @@ header{
 	color: #fff;
 }
 
+#benefits p{
+	font-family: MyFont Light;
+}
 .icon{
 	color: var(--color-amarillo);
 	font-size: 64px;
@@ -271,16 +285,31 @@ footer a:hover{
 	color: var(--color-azul) !important;
 }
 
-@media (max-width:600px){
-
-.circle{
-
-width: 60px;
-
-
+.text-form{
+	margin: 3% 0 0 0;
 }
 
+.form-box{
+	padding: 1% 30%;
+	border: 1px solid #000;
+	border-radius: 20px;
+}
 
+@media (max-width:600px){
+
+	.circle{
+		width: 80px;
+		height: 80px;
+		margin: auto;
+	}
+
+	.card-name{
+		text-align: center;
+	}
+
+	footer .text-right, .text-center{
+		text-align: left !important;
+	}
 
 }
 
